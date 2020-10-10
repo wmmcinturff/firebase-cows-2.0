@@ -1,6 +1,5 @@
 import cowData from '../../helpers/data/cowData';
 
-// TODO: STUDENTS
 const cowMaker = (cowObject) => {
   const domString = `<div class="card m-2" style="width: 18rem;" id="${cowObject.firebaseKey}">
   <div class="card-body">
@@ -10,6 +9,7 @@ const cowMaker = (cowObject) => {
       Location: ${cowObject.location}<br />
       Weight: ${cowObject.weight}<br />
     </p>
+    <a href="#" id="${cowObject.firebaseKey}" class="btn btn-info update-cow"><i class="far fa-edit"></i> Update Cow</a>
     <a href="#" id="${cowObject.firebaseKey}" class="btn btn-danger delete-cow">Delete Cow</a>
     </div>
    </div>`;
@@ -17,7 +17,7 @@ const cowMaker = (cowObject) => {
   $('body').on('click', '.delete-cow', (e) => {
     e.stopImmediatePropagation();
     const firebaseKey = e.currentTarget.id;
-    $(`.card${firebaseKey}`).remove();
+    $(`.card#${firebaseKey}`).remove();
     console.warn('Clicked DELETE COW', e.currentTarget.id);
     cowData.deleteCow(firebaseKey);
   });
