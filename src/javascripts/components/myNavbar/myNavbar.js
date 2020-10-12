@@ -20,7 +20,6 @@ const myNavbar = (currentFarmer) => {
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
       <li class="nav-item mx-3"  id="farmers-link">
@@ -33,7 +32,6 @@ const myNavbar = (currentFarmer) => {
         <a class="nav-link" href="#"><i class="fas fa-plus-circle"></i> Add A Cow</a>
       </li>
     </ul>
-
         <ul class="navbar-nav ml-auto">
           <li class="user-info-nav">
             Welcome, ${currentFarmer.name}!
