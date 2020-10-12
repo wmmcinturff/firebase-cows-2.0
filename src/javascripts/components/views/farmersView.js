@@ -9,7 +9,7 @@ const farmersView = () => {
           $('#app').append(card.farmerMaker(item));
         });
       } else {
-        $('#app').append('<h2>NO FARMERS<h2>');
+        $('#app').append('<h2>NO FARMERS!</h2>');
       }
     });
 };
